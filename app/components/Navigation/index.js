@@ -97,11 +97,12 @@ class Navigation extends React.Component {
                     Test 2 (delay)
                 </Link>
                 <Link className="test6" to="anchor" spy={true} smooth={true} duration={500}>
-                    Test 6 (anchor)
+
                 </Link>
 
                 <hr/>
                 <Element name="test1" className="element">
+
                     test 1
                     <br/>
                     <br/>
