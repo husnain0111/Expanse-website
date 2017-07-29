@@ -1,6 +1,9 @@
 /* 1. Body Default CSS
 /*-------------------------------------------------*/
-
+/*mahar css*/
+.element{
+    padding-top: 73px;
+}
 html,
 body {
     height: 100%;
@@ -186,6 +189,7 @@ i {
     font-weight: 700;
     text-decoration: none;
     transition: .7s;
+    cursor: pointer;
 }
 
 .menubar nav ul li a:before {

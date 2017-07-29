@@ -1,6 +1,8 @@
 import React from 'react';
 import Scroll  from 'react-scroll';
-import Button from 'react-uikit-button';
+import About from '../About/index'
+
+
 
 var Link       = Scroll.Link;
 var Element    = Scroll.Element;
@@ -50,12 +52,28 @@ class Navigation extends React.Component {
                         <div className="container">
                             <div className="row">
 
+                                <div className="col-lg-2 col-md-2 col-sm-3 col-xs-10" id="expanse_logo">
+                                    <div className="logo-area">
+                                        <a href="#">
+                                            <img src={require('../../img/logo.png')} />
+                                        </a>
+                                    </div>
+                                </div>
+
                                 <div className="col-lg-8 col-md-8 col-sm-7 col-xs-2" >
                                     <div className="menubar">
                                         <nav >
                                             <ul className="text-right" id="menu" >
-                                                <li><a href="#home">home</a></li>
-                                                <li><a href="#about">about</a></li>
+                                                <li>
+                                                    <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>
+                                                        Home
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link activeClass="active" to="about" spy={true} smooth={true} duration={500}>
+                                                        about
+                                                    </Link>
+                                                </li>
 
                                                 <li className="dropdown">
                                                     <a className="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -90,19 +108,17 @@ class Navigation extends React.Component {
 
 
 
-                <Link activeClass="active" to="test1" spy={false} smooth={true} duration={500} onSetActive={this.handleSetActive}>
-                    Test 1
-                </Link>
-                <Link activeClass="active" to="test2" spy={true} smooth={true} duration={500} onSetActive={this.handleSetActive} >
+
+                {/*<Link activeClass="active" to="test2" spy={true} smooth={true} duration={500} >
                     Test 2 (delay)
                 </Link>
                 <Link className="test6" to="anchor" spy={true} smooth={true} duration={500}>
-
+                    test 6 anchor
                 </Link>
 
-                <hr/>
-                <Element name="test1" className="element">
-
+                <hr/>*/}
+                <Element name="home" className="element">
+                    <br/>
                     test 1
                     <br/>
                     <br/>
@@ -118,36 +134,12 @@ class Navigation extends React.Component {
                     <br/>
                     <br/>
                     <br/>
-                    <hr/>
+
                 </Element>
 
-                <Element name="test2" className="element">
-                    test 2
-                    asdfasdf
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                <Element name="about" className="element">
+                    <hr/>
+                    <About/>
                 </Element>
 
                 <div id="anchor" className="element">
